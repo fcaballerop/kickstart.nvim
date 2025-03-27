@@ -243,6 +243,7 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'ThePrimeagen/harpoon',
+  'karb94/neoscroll.nvim',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -1048,5 +1049,6 @@ vim.keymap.set('n', '<leader>Ha', require('harpoon.mark').add_file, { desc = '[A
 vim.keymap.set('n', '<leader>Hj', require('harpoon.ui').nav_next, { desc = 'Navigate to next file' })
 vim.keymap.set('n', '<leader>Hk', require('harpoon.ui').nav_prev, { desc = 'Navigate to previous file' })
 
+require 'custom.plugins'
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
