@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -949,6 +949,11 @@ require('lazy').setup({
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+
+      require('mini.files').setup()
+      require('mini.icons').setup()
+
+      vim.keymap.set('n', '<leader>pf', MiniFiles.open, { desc = 'File navigator' })
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
